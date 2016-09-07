@@ -1,0 +1,24 @@
+<a class="waves-effect waves-light btn red" (click)="onShowHide(true)" [class.showingData]="mostrarDatos === true">Mostrar Datos</a>
+<a class="waves-effect waves-light btn red" (click)="onShowHide(false)" [class.showingData]="mostrarDatos === false">Ocultar Datos</a>
+
+<p class="white-text">Ejercicios del curso de Angular 2</p>
+<ul class="collection" *ngIf="mostrarDatos === true">
+  <li class="collection-item">{{pelicula.titulo}}</li>
+  <li class="collection-item">{{pelicula.director}}</li>
+  <li class="collection-item">{{pelicula.anio}}</li>
+</ul>
+
+<p class="white-text">Listado de peliculas:</p>
+<ul>
+  <ul *ngFor="#pelicula of peliculas" class="collection">
+    <li (click)="onCambiarPelicula(pelicula)" class="collection-item pelicula-title" [class.flow-text]="peliculaElegida.id === pelicula.id">{{pelicula.titulo}}</li>
+    <li  *ngIf="pelicula.director" class="collection-item">{{pelicula.director}}</li>
+    <li class="collection-item">{{pelicula.anio}}</li>
+  </ul>
+</ul>
+<div class="row">
+  <div class="input-field col m5">
+    <input type="text" [(ngModel)]="pelicula.titulo" class="validate">
+    <label class="active" >Cambiar Titulo:</label>
+  </div>
+</div>

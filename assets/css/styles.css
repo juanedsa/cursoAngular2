@@ -5,3 +5,11 @@ h1 {
 .showingData {
   display: none;
 }
+
+.pelicula-title {
+  cursor: pointer;
+}
+
+.clicked {
+  font-size: 30px; 
+}
