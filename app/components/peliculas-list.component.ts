@@ -1,11 +1,13 @@
 // Importar el núcleo de Angular
 import {Component} from 'angular2/core';
 import {Pelicula} from '../model/pelicula';
+import {PeliculasService} from '../services/peliculas.service';
 
 // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
 @Component({
     selector: 'peliculas-list',
-    templateUrl: 'app/view/peliculas-list.html'
+    templateUrl: 'app/view/peliculas-list.html',
+    providers: [PeliculasService]
 })
 
 // Clase del componente donde iran los datos y funcionalidades
@@ -16,18 +18,11 @@ export class PelicilasListComponent {
   public mostrarDatos:boolean;
   public peliculas;
 
-  constructor(){
+  constructor(private _peliculasService: PeliculasService){
     this.mostrarDatos = false;
 
+    this.peliculas = this._peliculasService.getPeliculas();
 
-
-    this.peliculas = [
-      new Pelicula(1, "Batman vs Superman", "Juan", 2016),
-      new Pelicula(2, "Hulk", "Juan", 2016),
-      new Pelicula(3, "Iron Man", "Juan", 2016),
-      new Pelicula(4, "Spiderman", "Juan", 2016),
-      new Pelicula(5, "La vida es Bella", "", 2016),
-    ];
 
     this.pelicula = this.peliculas[0];
     this.peliculaElegida = this.peliculas[0];
