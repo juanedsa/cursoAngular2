@@ -1,14 +1,14 @@
 // Importar el núcleo de Angular
 import {Component} from 'angular2/core';
-import {Pelicula} from '../model/pelicula';
 
 // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
 @Component({
-    selector: 'peliculas-footer',
-    templateUrl: 'app/view/peliculas-footer.html'
+    selector: 'contacto',
+    templateUrl: 'app/view/contacto.html'
 })
 
 // Clase del componente donde iran los datos y funcionalidades
-export class PeliculasFooterComponent {
+export class ContactoComponent {
+    public titulo:string = "Contacto";
 
 }

@@ -11,7 +11,7 @@ import {PeliculasService} from '../services/peliculas.service';
 })
 
 // Clase del componente donde iran los datos y funcionalidades
-export class PelicilasListComponent {
+export class PeliculasListComponent {
 
   public pelicula:Pelicula;
   public peliculaElegida:Pelicula;

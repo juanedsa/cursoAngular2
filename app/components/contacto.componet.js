@@ -11,7 +11,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var PeliculasFooterComponent;
+    var ContactoComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -19,20 +19,21 @@ System.register(['angular2/core'], function(exports_1, context_1) {
             }],
         execute: function() {
             // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
-            PeliculasFooterComponent = (function () {
-                function PeliculasFooterComponent() {
+            ContactoComponent = (function () {
+                function ContactoComponent() {
+                    this.titulo = "Contacto";
                 }
-                PeliculasFooterComponent = __decorate([
+                ContactoComponent = __decorate([
                     core_1.Component({
-                        selector: 'peliculas-footer',
-                        templateUrl: 'app/view/peliculas-footer.html'
+                        selector: 'contacto',
+                        templateUrl: 'app/view/contacto.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], PeliculasFooterComponent);
-                return PeliculasFooterComponent;
+                ], ContactoComponent);
+                return ContactoComponent;
             }());
-            exports_1("PeliculasFooterComponent", PeliculasFooterComponent);
+            exports_1("ContactoComponent", ContactoComponent);
         }
     }
 });
-//# sourceMappingURL=peliculas-footer.component.js.map
+//# sourceMappingURL=contacto.componet.js.map

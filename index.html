@@ -21,6 +21,9 @@
   <script src="node_modules/systemjs/dist/system.src.js"></script>
   <script src="node_modules/rxjs/bundles/Rx.js"></script>
   <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+  <script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+  <base href="/">
 
   <!-- 2. Configurar SystemJS -->
   <script>
@@ -41,7 +44,11 @@
 
 <!-- 3. Mostramos la aplicación -->
 <body>
-  <my-app>Cargando...</my-app>
+    <div class="container">
+        <!-- Page Content goes here -->
+        <my-app>Cargando...</my-app>
+    </div>
+
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

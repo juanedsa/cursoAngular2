@@ -11,7 +11,7 @@ System.register(['angular2/core', '../services/peliculas.service'], function(exp
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1, peliculas_service_1;
-    var PelicilasListComponent;
+    var PeliculasListComponent;
     return {
         setters:[
             function (core_1_1) {
@@ -22,8 +22,8 @@ System.register(['angular2/core', '../services/peliculas.service'], function(exp
             }],
         execute: function() {
             // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
-            PelicilasListComponent = (function () {
-                function PelicilasListComponent(_peliculasService) {
+            PeliculasListComponent = (function () {
+                function PeliculasListComponent(_peliculasService) {
                     this._peliculasService = _peliculasService;
                     this.mostrarDatos = false;
                     this.peliculas = this._peliculasService.getPeliculas();
@@ -31,27 +31,27 @@ System.register(['angular2/core', '../services/peliculas.service'], function(exp
                     this.peliculaElegida = this.peliculas[0];
                     this.debug();
                 }
-                PelicilasListComponent.prototype.debug = function () {
+                PeliculasListComponent.prototype.debug = function () {
                     console.log(this.pelicula);
                 };
-                PelicilasListComponent.prototype.onShowHide = function (value) {
+                PeliculasListComponent.prototype.onShowHide = function (value) {
                     this.mostrarDatos = value;
                 };
-                PelicilasListComponent.prototype.onCambiarPelicula = function (_pelicula) {
+                PeliculasListComponent.prototype.onCambiarPelicula = function (_pelicula) {
                     this.pelicula = _pelicula;
                     this.peliculaElegida = _pelicula;
                 };
-                PelicilasListComponent = __decorate([
+                PeliculasListComponent = __decorate([
                     core_1.Component({
                         selector: 'peliculas-list',
                         templateUrl: 'app/view/peliculas-list.html',
                         providers: [peliculas_service_1.PeliculasService]
                     }), 
                     __metadata('design:paramtypes', [peliculas_service_1.PeliculasService])
-                ], PelicilasListComponent);
-                return PelicilasListComponent;
+                ], PeliculasListComponent);
+                return PeliculasListComponent;
             }());
-            exports_1("PelicilasListComponent", PelicilasListComponent);
+            exports_1("PeliculasListComponent", PeliculasListComponent);
         }
     }
 });
