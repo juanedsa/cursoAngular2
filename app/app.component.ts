@@ -3,6 +3,7 @@ import {Component} from 'angular2/core';
 import {PeliculasListComponent} from './components/peliculas-list.component';
 import {PeliculasFooterComponent} from './components/peliculas-footer.component';
 import {ContactoComponent} from './components/contacto.componet';
+import {CrearPeliculaComponent} from './components/crear-pelicula.component';
 
 import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router';
 
@@ -14,6 +15,7 @@ import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router';
                     PeliculasListComponent,
                     PeliculasFooterComponent,
                     ContactoComponent,
+                    CrearPeliculaComponent,
                     ROUTER_DIRECTIVES
                 ]
 })
@@ -21,6 +23,7 @@ import {ROUTER_DIRECTIVES, RouteConfig, Router} from 'angular2/router';
 @RouteConfig([
     {path: "/peliculas", name: "Peliculas", component: PeliculasListComponent, useAsDefault: true},
     {path: "/contacto", name: "Contacto", component: ContactoComponent},
+    {path: "/crear-pelicula", name: "CrearPelicula", component: CrearPeliculaComponent},
 ])
 
 // Clase del componente donde iran los datos y funcionalidades

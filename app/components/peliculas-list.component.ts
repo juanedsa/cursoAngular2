@@ -27,7 +27,7 @@ export class PeliculasListComponent {
     this.pelicula = this.peliculas[0];
     this.peliculaElegida = this.peliculas[0];
 
-    this.debug();
+    //this.debug();
   }
 
   debug() {

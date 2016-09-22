@@ -29,7 +29,7 @@ System.register(['angular2/core', '../services/peliculas.service'], function(exp
                     this.peliculas = this._peliculasService.getPeliculas();
                     this.pelicula = this.peliculas[0];
                     this.peliculaElegida = this.peliculas[0];
-                    this.debug();
+                    //this.debug();
                 }
                 PeliculasListComponent.prototype.debug = function () {
                     console.log(this.pelicula);

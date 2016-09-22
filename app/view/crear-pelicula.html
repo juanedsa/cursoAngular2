@@ -1,0 +1,25 @@
+<div class="row white">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="titulo" type="text" class="validate" #titulo>
+          <label for="titulo">Titulo</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="director" type="text" class="validate" #director>
+          <label for="director">Director</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="anio" type="text" class="validate" #anio>
+          <label for="anio">Año</label>
+        </div>
+      </div>
+      <div class="row">
+        <a class="waves-effect waves-light btn red" (click)="onCrearPelicula(titulo.value, director.value, anio.value )">Crear Pelicula</a>
+      </div>
+    </form>
+  </div>
