@@ -15,6 +15,7 @@
     <li (click)="onCambiarPelicula(pelicula)" class="collection-item pelicula-title" [class.flow-text]="peliculaElegida.titulo === pelicula.titulo">{{pelicula.titulo}}</li>
     <li  *ngIf="pelicula.director" class="collection-item">{{pelicula.director}}</li>
     <li class="collection-item">{{pelicula.anio}}</li>
+    <li class="collection-item"><a [routerLink]="['CrearPeliculaBasadaEnOtra', {titulo: pelicula.titulo}]">Añadir pelicula Basada en esta</a></li>
   </ul>
 </ul>
 <div class="row">

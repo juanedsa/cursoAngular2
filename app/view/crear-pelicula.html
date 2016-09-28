@@ -2,8 +2,8 @@
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12">
-          <input id="titulo" type="text" class="validate" #titulo>
-          <label for="titulo">Titulo</label>
+          <input id="titulo" type="text" class="validate" #titulo value="{{tituloPelicula}}">
+          <label for="titulo" [class.active]="tituloPelicula">Titulo</label>
         </div>
       </div>
       <div class="row">
